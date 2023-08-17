@@ -1,47 +1,31 @@
 body {
-  font-family: inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-    "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 500;
-  height: 100vh; 
-  margin: 0; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #EAE2B7;
+    font-family: Arial, sans-serif;
+    background-color: #003049;
+    color: #D62828;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-  max-width: 800px;
-  width: 100%; 
-  padding: 20px;
-  background-color: #003049;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  color: #EAE2B7;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #EAE2B7;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-button, button.primary {
-  background-color: #F77F00;
-  color: #003049;
-  border: 1px solid #FCBF49;
+h1, h2 {
+    color: #D62828;
 }
 
-button:hover, button.primary:hover {
-  background-color: #D62828;
-  color: #EAE2B7;
-}
-
-.nav a.active, .nav a:hover {
-  background-color: #F77F00;
-  color: #003049;
-}
-
-a, a:link, a:visited {
-  color: #FCBF49;
+a {
+    color: #FCBF49;
+    text-decoration: none;
 }
 
 a:hover {
-  background: linear-gradient(#FCBF49, #FCBF49);
+    color: #F77F00;
 }
 
-/* 나머지 스타일은 그대로 유지 */
+/* Any other styling details for other elements can be added here using the colors you provided */
