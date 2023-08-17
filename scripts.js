@@ -49,35 +49,24 @@ function loadIndex() {
     .catch(error => {
         console.error("Error fetching posts:", error);
     });
-}
 
 function loadPost() {
     const urlParams = new URLSearchParams(window.location.search);
     const postId = urlParams.get('id');
 
-    if (!postId) {
-        // Post ID가 제공되지 않았을 경우 오류 메시지 표시
-        document.getElementById('postTitle').textContent = '오류';
-        document.getElementById('postContent').textContent = '잘못된 접근입니다.';
-        return;
-    }
-
     fetch('posts.json')
     .then(response => response.json())
     .then(posts => {
-        if (posts[postId]) {
-            document.getElementById('postTitle').textContent = posts[postId].title;
-            document.getElementById('postContent').textContent = posts[postId].content;
+        const post = posts[postId];
+        if (post) {
+            document.getElementById('postTitle').textContent = post.title;
+            document.getElementById('postContent').textContent = post.content;
         } else {
-            // 제공된 Post ID에 해당하는 포스트가 없을 경우 오류 메시지 표시
-            document.getElementById('postTitle').textContent = '오류';
-            document.getElementById('postContent').textContent = '포스트를 찾을 수 없습니다.';
+            console.error("Post not found!");
         }
     })
     .catch(error => {
         console.error("Error fetching post:", error);
-        document.getElementById('postTitle').textContent = '오류';
-        document.getElementById('postContent').textContent = '포스트를 로드하는 중 문제가 발생했습니다.';
     });
 }
 
