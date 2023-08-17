@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #9A8F97;
-    color: #736F72;
+    background-color: #22211E;
+    color: #FFFFFF;  /* 순수 흰색으로 설정한 글자 색 */
     margin: 0;
     padding: 0;
 }
@@ -10,28 +10,30 @@ body {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #E9E3E6;
+    background-color: #FFF986;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2 {
-    color: #B2B2B2;
+    color: #FFFFFF;
+    border-bottom: 2px solid #FF534A;  /* 제목 아래에 빨간색 하이라이트를 추가 */
 }
 
 a {
-    color: #C3BABA;
+    color: #FF534A;
     text-decoration: none;
 }
 
 a:hover {
-    color: #E9E3E6;
+    color: #FFF986;
+    background-color: #FF534A;
 }
 
 button {
-    color: #9A8F97;
-    background-color: #E9E3E6;
-    border: 1px solid #736F72;
+    color: #22211E;
+    background-color: #FF534A;
+    border: none;
     padding: 5px 15px;
     border-radius: 5px;
     cursor: pointer;
@@ -40,6 +42,6 @@ button {
 }
 
 button:hover {
-    background-color: #C3BABA;
-    color: #E9E3E6;
+    background-color: #FFF986;
+    color: #22211E;
 }
