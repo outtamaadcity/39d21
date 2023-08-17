@@ -29,4 +29,24 @@ function loadIndex() {
         let latestPost = posts[posts.length - 1];
         let latestPostDiv = document.getElementById('latestPost');
         let postTitle = document.createElement('h2');
-        postTitle.textContent =
+        postTitle.textContent = latestPost.title;
+        let postContent = document.createElement('p');
+        postContent.textContent = latestPost.content;
+        latestPostDiv.appendChild(postTitle);
+        latestPostDiv.appendChild(postContent);
+
+        // Add post page buttons
+        let postPagesDiv = document.getElementById('postPages');
+        for (let i = 0; i < posts.length; i++) {
+            let button = document.createElement('button');
+            button.textContent = i + 1;
+            button.onclick = function() {
+                window.location.href = `post.html?id=${i}`;
+            };
+            postPagesDiv.appendChild(button);
+        }
+    })
+    .catch(error => {
+        console.error("Error fetching posts:", error);
+    });
+}
