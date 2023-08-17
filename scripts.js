@@ -49,24 +49,4 @@ function loadIndex() {
     .catch(error => {
         console.error("Error fetching posts:", error);
     });
-
-function loadPost() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const postId = urlParams.get('id');
-
-    fetch('posts.json')
-    .then(response => response.json())
-    .then(posts => {
-        const post = posts[postId];
-        if (post) {
-            document.getElementById('postTitle').textContent = post.title;
-            document.getElementById('postContent').textContent = post.content;
-        } else {
-            console.error("Post not found!");
-        }
-    })
-    .catch(error => {
-        console.error("Error fetching post:", error);
-    });
 }
-
